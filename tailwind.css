@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input {
+        @apply border-2 p-1.5 rounded block focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent;
+    }
+    label{
+        @apply font-medium text-sm text-gray-500
+    }
+}
+@layer components{
+    .title{
+        @apply border-b font-medium capitalize text-center text-white;
+    }
+    .box{
+        @apply cursor-move w-auto ancho rounded px-5 py-2 border-2 absolute text-white text-center;
+    }
+
+    .boxSelected{
+        @apply border-red-500
+    }
+
+    .person{
+        @apply cursor-move w-auto ancho rounded border-2 absolute text-white text-center flex flex-col justify-center items-center;
+    }
+
+    .personSelected{
+        @apply person border-red-500;
+    }
+    .system{
+        @apply box bg-blue-700
+    }
+    .systemSelected{
+        @apply system border-red-500
+    }
+
+    .container{
+        @apply box bg-blue-500
+    }
+    .containerSelected{
+        @apply container boxSelected
+    }
+
+    .database{
+        @apply box db
+    }
+    .databaseSelected{
+        @apply database boxSelected
+    }
+
+    .component{
+        @apply box bg-blue-300
+    }
+    .componentSelected{
+        @apply box bg-blue-300 boxSelected
+    }
+
+
+}
+@layer utilities{
+    .ancho{
+        max-width: 13rem;
+    }
+    .db{
+        background-image: url("./assets/db.png");
+        background-size:  100%;
+        background-repeat:   no-repeat;
+        background-position: center top;
+    }
+
+
+    .cylinder {
+        position: absolute;
+        overflow: hidden;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        max-width: 13rem;
+        border-radius: 50px/25px;
+        background-color: #3B82F6;
+        padding: 1.25rem;
+        cursor: move;
+        border-width: 2px;
+        border-color:#D1D5DB;
+
+    }
+
+    .cylinder:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 50px;
+        max-width: 13rem;
+        border-radius: 50px/25px;
+        background-color: #030303;
+        border-color:#D1D5DB;
+        content: '';
+    }
+
+    .cylinder:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: auto;
+        height: 50px;
+        max-width: 13rem;
+        border-radius: 50px/25px;
+        background-color: #4682e2;
+        border-color:#D1D5DB;
+        content: '';
+    }
+
+
+    .cylinderSelected {
+        position: absolute;
+        overflow: hidden;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        max-width: 20rem;
+        border-radius: 50px/25px;
+        background-color: #3B82F6;
+        padding: 1.25rem;
+        cursor: move;
+        border-width: 2px;
+        border-color:#EF4444;
+
+    }
+
+    .cylinderSelected:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 50px;
+        max-width: 20rem;
+        border-radius: 50px/25px;
+        background-color: #4682e2;
+        border-color:#D1D5DB;
+        content: '';
+    }
+
+    .cylinderSelected:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: auto;
+        height: 50px;
+        max-width: 20rem;
+        border-radius: 50px/25px;
+        background-color: #4682e2;
+        border-color:#D1D5DB;
+        content: '';
+    }
+
+
+    /*    .cylinder {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            width: auto;
+            height: auto;
+            max-width: 10rem;
+            border-radius: 50px/25px;
+
+            background-color: #3B82F6;
+            padding: 1.25rem;
+            cursor: move;
+        }
+
+        .cylinder:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: 0.25rem;
+            max-width: 10rem;
+            border-radius: 50px/25px;
+            background-color: rgba(160, 160, 160, 0.2);
+            content: '';
+        }
+
+        .cylinder:after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: auto;
+            height: 0.25rem;
+            max-width: 10rem;
+            border-radius: 50px/25px;
+            background-color: rgba(160, 160, 160, 0.4);
+            content: '';
+        }*/
+}
